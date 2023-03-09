@@ -1,0 +1,61 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+
+}
+
+
+h1{
+    font-family: 'Playfair Display', serif;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+}
+p{
+    font-family: 'Playfair Display', serif;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+button{
+    background-color: rgb(78, 144, 243);
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+ border-radius: 10px;
+    
+}
+input{
+    text-align: center;
+    margin: 0 auto;
+}
+.x{
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 15px 10px 5px #7d7577;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+    
+
+
+}
+
+
+.x input{
+    border-radius: 5px;
+    border-style: none;
+}
