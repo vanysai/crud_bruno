@@ -1,0 +1,187 @@
+/* --------------------------- Font --------------------------- */
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../font/Ubuntu-M.ttf") format("truetype");
+}
+
+/* --------------------------- Header --------------------------- */
+body{
+    background-color: whitesmoke;
+}
+
+#nav {
+    width: 100%;
+    height: 15vh;
+    background-color: #5e308c;
+    color: #f2c49b;
+    font-size: 2em;
+    font-family: Ubuntu;
+    text-align: center;
+    line-height: 14vh;
+    
+}
+
+/* --------------------------- Form --------------------------- */
+
+#input-data {
+    width: 90vw;
+    font-family: Ubuntu;
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: flex;
+}
+
+.navbar{
+    /* flex: 1; */
+    /* margin: 0.5px; */
+    /* height: 30px; */
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #262626;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    width: 200px;
+
+}
+
+.input-text {
+    flex: 1;
+    min-width: 210px;
+    margin: 5px;
+    height: 35px;
+    padding-left: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #262626;
+    transition: 0.25s;
+    outline: none;
+}
+
+.input-text:focus{
+    border-color: whitesmoke;
+}
+
+.input-btn-form {
+    /* flex: 1; */
+    /* margin: 0.5px; */
+    /* height: 30px; */
+    border-radius: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #262626;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    width: 200px;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 1;
+}
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: 1;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+.input-btn:hover {
+    background-color: #383838;
+    border-color: #383838;
+    color: white;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/* --------------------------- Table --------------------------- */
+
+#myTable {
+    font-family: Ubuntu;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5vh;
+    border-collapse: collapse;
+}
+
+#myTable th {
+    background-color: #4a1b8c;
+    padding: 10px;
+    color: white;
+    font-weight: 100;
+}
+
+#myTable td, th{
+    border: 1px solid whitesmoke;
+    padding: 8px;
+}
+
+#myTable td{
+    padding: 5px;
+}
+
+#myTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#myTable tr:hover {
+    background-color: #ddd;
+}
+
+.remove-btn{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-width: 0px;
+    background-color: transparent;
+    cursor: pointer;
+}
