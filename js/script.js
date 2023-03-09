@@ -1,56 +1,57 @@
-//Função para adicionar uma nova linha na tabela
-function addToTable() {
+const username = document.getElementById('user')
+const senha = document.getElementById('password')
+const senhaconfirmada = document.getElementById('confirmpassword')
+const nomeproduto = document.getElementById('Nome')
+const dataProduto = document.getElementById('produtodata')
+const codigoproduto = document.getElementById('codigo')
+const quantidadeproduto = document.getElementById('quantidade')
+const valorproduto = document.getElementById('valor')
 
-    //Definindo as variaveis e recebendo os dados
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let phone = document.getElementById('phone').value;
-    let work = document.getElementById('work').value;
-    let table = document.getElementById("myTable");
 
-    let tableSize = table.rows.length; //Calculando o tamanho da Tabela
-    let row = table.insertRow(tableSize); //Inserindo uma linha abaixo da Tabela
-    let cell1 = row.insertCell(0); //Inserindo as celulas da linha
-    let cell2 = row.insertCell(1);
-    let cell3 = row.insertCell(2);
-    let cell4 = row.insertCell(3);
-    let cell5 = row.insertCell(4);
-    let cell6 = row.insertCell(5);
-    row.id = tableSize; //Adicionando o id no elemento a ser criado
+const users = []
 
-    //Criando o codigo do botão para remover a linha
-    let btnCode = "<button class='remove-btn' onclick='removeToTable(this)'>Remover</button>";
 
-    //Preenchendo as celulas da linha
-    cell1.innerHTML = tableSize;
-    cell2.innerHTML = name;
-    cell3.innerHTML = email;
-    cell4.innerHTML = phone;
-    cell5.innerHTML = work;
-    cell6.innerHTML = btnCode;
 
-    //Limpando os campos de inserção de dados
-    document.getElementById('name').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('phone').value = "";
-    document.getElementById('work').value = "";
 
-    //Retornando 'false' para impedir o reload da pagina
-    return false;
+
+function Register() {
+    if (users.find(obj => obj.username === username.value) === undefined) {
+        if (senha.value === senhaconfirmada.value) {
+            users.push({
+                username: username.value,
+                senha: senha.value
+            });
+            alert('usuário criado')
+        } else alert('Senhas não coincidem')
+    } else alert('Usuário já existente')
 }
 
-//Função para remover uma linha
-function removeToTable(id){
-
-    let row = id.parentNode.parentNode.id; //Pegando o id do avô do botão
-    row = document.getElementById(row); //Recebendo o elemento da linha pelo ID
-    row.parentNode.removeChild(row); //Removendo a linha
-
-    //Retornando 'false' para impedir o reload da pagina
-    return false;
+function login(){
+    if(users.find(obj => (obj.username === username.value)&&(obj.password === senha.value))){
+            alert('login executado com sucesso')
+    }
 }
 
-function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-  }
+class Novoproduto{
+    constructor(codigo, Nome, DataCadastro, Quantidade, Valor){
+    this.codigo = codigo,
+    this.Nome = Nome,
+    this.DataCadastro = DataCadastro,
+    this.Quantidade = Quantidade,
+    this.Valor = Valor,
+}
+}
+
+
+
+function Adicionarproduto() {
+    const produtoNovo = new Novoproduto(codigoproduto.value, nomeproduto.value, dataProduto.value,quantidadeproduto.value, valorproduto.value )
+    Document.createElement('div')
+    div.id('container')
+}
+
+
+function Deletar(){
+    document.removeChild
+}
+
