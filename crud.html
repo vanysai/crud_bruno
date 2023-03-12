@@ -1,0 +1,50 @@
+<!DOCTYPE html">
+<html lang="pt-br">
+<head>
+	<title>CRUD JS</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="styles.css" />	
+	
+	<script src="myscript.js"></script>
+</head>
+
+<body>
+    <h1 class="title">CRUD</h1>
+    <table>
+        <caption><h2>Tabela</h2></caption>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Value</th>
+                <th>Create date</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyResultados"></tbody>
+        <tfoot></tfoot>
+    </table>
+    <br>
+	<div class="all">
+		<div class="center-fixed">	
+			<form id="frmCadastro">
+				<label for="txtNome">Nome</label><br>
+				<input type="text" id="txtNome" placeholder="Nome"><br>
+				
+				<label for="dtpDataNascimento">Data cadastro</label><br>
+				<input type="date" id="dtpDataNascimento" value="1990-08-29" required>
+				
+				<fieldset>
+					<legend>Quantidade</legend>
+					<input type="radio" name="genero" value="male" id="rdoMasculino" checked>
+					<label for="rdoMasculino">1</label><br>		
+					
+					<input type="radio" name="genero" value="female" id="rdoFeminino">
+					<label for="rdoFeminino">2</label>
+				</fieldset>
+				
+				<input type="submit" name="" id="btnCadastrarSalvar" value="Cadastrar">
+			</form>
+		</div>
+</body>
+</html>
