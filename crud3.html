@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="style-crud.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Cadastro de Produtos</span>
+      <button onclick="openModal()" id="new">Incluir</i></button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+          <label for="m-nome">Código</label>
+          <input id="code" type="number" required />
+  
+          <label for="m-funcao">Nome</label>
+          <input id="name" type="text" required />
+  
+          <label for="m-salario">Quantidade</label>
+          <input id="quantity" type="number" required />
+
+          <label for="m-salario">Valor</label>
+          <input id="value" type="number" required />
+
+          <label for="m-salario">Data</label>
+          <input id="date" type="date" required />
+          <button id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="script-crud.js"></script>
+</body>
+</html>
